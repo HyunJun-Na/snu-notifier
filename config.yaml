@@ -1,0 +1,85 @@
+# ============================================================
+# SNU 공지 알림 시스템 - 설정 파일
+# 이 파일은 텔레그램 명령(/add, /block, /remove)으로도 수정됩니다.
+# 직접 편집도 가능: GitHub에서 수정 → 커밋하면 다음 실행부터 반영
+# ============================================================
+
+# ---- 프로필 ----
+# profile.url 페이지를 매 실행마다 가져와서 Claude 판정에 사용.
+# 페이지 접속 실패 시 base 프로필만 사용 (안전장치).
+profile:
+  url: https://hyunjun-na.github.io
+  base: |
+    서울대 기계공학부 3학년 (22학번). 서울대학교 기계공학부 대학원 진학 준비중.
+    관심분야: 로보틱스, AI 활용.
+    찾는 것: 연구 인턴/학부연구생, 채용연계형 인턴,
+    외부장학금(풀브라이트, KFAS, 국가장학금 등), 근로장학,
+    교환학생/SWP, 교내 봉사활동(나눔실천단 등), TOEFL/어학 지원.
+    제외: 대학원 재학생·포스트닥 전용, 졸업예정자 대상 신입공채,
+    특정 성별·외국인 전용 프로그램.
+
+# ---- 1단계 규칙 필터 (exclude를 include보다 먼저 검사) ----
+keywords:
+  hard_include:
+  - 근로장학
+  - 채용연계
+  - 인턴
+  - internship
+  - 교환학생
+  - SWP
+  - 산학장학
+  - 장학생 모집
+  - 장학생 선발
+  - 국가장학
+  - 국가우수장학
+  - 풀브라이트
+  - fulbright
+  - 해외수학
+  - TOEFL
+  - 나눔실천단
+  - 학부연구생
+  - 봉사자 모집
+  hard_exclude:
+  - 분실물
+  - 시설 점검
+  - 셔틀
+  - 졸업앨범
+  - 주차
+  - 게시판 보기
+  - 직인 날인
+  - '[대학원]'
+  - 포스트닥
+  - postdoc
+
+# ---- 3단계 라우팅 ----
+  - 박람회
+routing:
+  instant_min_score: 8
+  digest_min_score: 5
+  deadline_urgent_days: 7
+claude:
+  model: claude-haiku-4-5-20251001
+  max_posts_per_run: 30     # 폭주 방지 상한
+
+# ---- 모니터링 소스 ----
+sources:
+- id: me_career
+  name: 기계공학부 취업및홍보
+  url: https://me.snu.ac.kr/%EC%B7%A8%EC%97%85-%EB%B0%8F-%ED%99%8D%EB%B3%B4/
+- id: me_scholarship
+  name: 기계공학부 장학
+  url: 
+    https://me.snu.ac.kr/%EC%9E%A5%ED%95%99-%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD/
+- id: me_undergrad
+  name: 기계공학부 학부공지
+  url: 
+    https://me.snu.ac.kr/%ED%95%99%EB%B6%80-%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD/
+- id: snu_events
+  name: SNU캘린더 행사
+  url: https://www.snu.ac.kr/snunow/events
+- id: snu_notice
+  name: SNU 공지사항
+  url: https://www.snu.ac.kr/snunow/notice/genernal
+- id: student_notice
+  name: 학생처 공지
+  url: https://student.snu.ac.kr/공지사항/
