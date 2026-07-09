@@ -14,7 +14,10 @@ profile:
     관심분야: 로보틱스, AI 활용.
     찾는 것: 연구 인턴/학부연구생, 채용연계형 인턴,
     외부장학금(풀브라이트, KFAS, 국가장학금 등), 근로장학,
-    교환학생/SWP, 교내 봉사활동(나눔실천단 등), TOEFL/어학 지원.
+    교환학생/SWP, 교내 봉사활동(나눔실천단 등), TOEFL/어학 지원,
+    기숙사 입주 기회 (거리기준 미달로 일반 입사 불가 → LnL, 생활관 멘토/조교,
+    장학관 입주생 등 거리기준 없는 경로만 해당. 거리기준 적용되는 일반 입사
+    공지는 무관).
     제외: 대학원 재학생·포스트닥 전용, 졸업예정자 대상 신입공채,
     특정 성별·외국인 전용 프로그램.
 
@@ -39,6 +42,8 @@ keywords:
   - 나눔실천단
   - 학부연구생
   - 봉사자 모집
+  - LnL
+  - 입주생
   hard_exclude:
   - 분실물
   - 시설 점검
@@ -68,11 +73,11 @@ sources:
   url: https://me.snu.ac.kr/%EC%B7%A8%EC%97%85-%EB%B0%8F-%ED%99%8D%EB%B3%B4/
 - id: me_scholarship
   name: 기계공학부 장학
-  url: 
+  url:
     https://me.snu.ac.kr/%EC%9E%A5%ED%95%99-%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD/
 - id: me_undergrad
   name: 기계공학부 학부공지
-  url: 
+  url:
     https://me.snu.ac.kr/%ED%95%99%EB%B6%80-%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD/
 - id: snu_events
   name: SNU캘린더 행사
@@ -83,3 +88,9 @@ sources:
 - id: student_notice
   name: 학생처 공지
   url: https://student.snu.ac.kr/공지사항/
+- id: snudorm_lnl
+  name: 생활관 LnL공지
+  url: https://snudorm.snu.ac.kr/category/board-39-GN-rj1WJYOB-20221110150428/
+- id: lnl_recruit
+  name: LnL 모집공고
+  url: https://lnl.snu.ac.kr/category/board-155-gn-xtmbvylp-20231016160412/
