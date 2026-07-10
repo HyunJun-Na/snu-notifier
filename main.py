@@ -71,11 +71,18 @@ def main():
                         f"필요한 게 걸러졌다면 /add 키워드 로 조정하세요.")
 
     header = f"📋 {now.strftime('%m/%d')} SNU 공지 리포트"
+    today = now.strftime("%Y-%m-%d")
+    last_report = store.load_state("report_sent.json", {"date": ""})
     if sections:
+        # 새 글이 있으면 항상 발송 (같은 날 두 번째 실행이어도 그 사이 새 글만 실림)
         tg.send(header + "\n\n" + "\n\n" + ("\n" + "─" * 20 + "\n\n").join(sections))
-    else:
+        store.save_state("report_sent.json", {"date": today})
+    elif last_report["date"] != today:
+        # 새 글이 없어도 하루 한 번은 생존 신호를 보냄
         tg.send(header + "\n\n어제는 새로 올라온 글이 없었어요."
                 + (f"\n⚠️ 수집 오류: {errors}" if errors else ""))
+        store.save_state("report_sent.json", {"date": today})
+    # 오늘 이미 리포트를 보냈고 새 글도 없으면 조용히 종료 (예약 이중화 대비)
 
     store.save_state("last_run.json", {
         "time": now.strftime("%m/%d %H:%M"), "new": len(new_posts),
