@@ -65,10 +65,9 @@ def main():
         sections.append("☀️ 알아두면 좋은 공지 (" + str(len(digest)) + "건)\n\n"
                         + "\n\n".join(fmt_post(p) for p in sorted(
                             digest, key=lambda p: -p["verdict"]["score"])[:15]))
-    if dropped:
-        titles = "\n".join(f"  · {p['title'][:50]}" for p in dropped[:20])
-        sections.append(f"🗑 걸러진 글 ({len(dropped)}건)\n{titles}\n\n"
-                        f"필요한 게 걸러졌다면 /add 키워드 로 조정하세요.")
+    # 걸러진 글은 리포트에서 제외하고 실행 로그에만 남김 (Actions 탭에서 확인 가능)
+    for p in dropped:
+        print(f"[걸러짐] {p['title'][:60]} — {p['verdict'].get('reason', '')}")
 
     header = f"📋 {now.strftime('%m/%d')} SNU 공지 리포트"
     today = now.strftime("%Y-%m-%d")
