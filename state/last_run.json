@@ -1,8 +1,8 @@
 {
- "time": "07/31 08:44",
- "new": 7,
- "instant": 1,
- "digest": 1,
- "dropped": 5,
+ "time": "08/01 08:46",
+ "new": 6,
+ "instant": 0,
+ "digest": 2,
+ "dropped": 4,
  "errors": []
 }
