@@ -55,9 +55,9 @@ keywords:
   - '[대학원]'
   - 포스트닥
   - postdoc
+  - 박람회
 
 # ---- 3단계 라우팅 ----
-  - 박람회
 routing:
   instant_min_score: 8
   digest_min_score: 5
