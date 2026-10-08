@@ -1,8 +1,10 @@
 {
- "time": "10/07 10:50",
- "new": 10,
+ "time": "10/08 11:17",
+ "new": 14,
  "instant": 1,
  "digest": 0,
- "dropped": 9,
- "errors": []
+ "dropped": 13,
+ "errors": [
+  "LnL 모집공고: HTTPSConnectionPool(host='lnl.snu.ac.kr', port=443): Max retries exceeded with url: /category/board-155-gn-xtmbvylp-20231016160412/ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)')))"
+ ]
 }
