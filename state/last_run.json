@@ -1,10 +1,8 @@
 {
- "time": "10/13 12:13",
- "new": 13,
- "instant": 0,
+ "time": "10/14 10:25",
+ "new": 7,
+ "instant": 2,
  "digest": 0,
- "dropped": 13,
- "errors": [
-  "학생처 공지: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
- ]
+ "dropped": 5,
+ "errors": []
 }
