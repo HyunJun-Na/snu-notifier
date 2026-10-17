@@ -1,10 +1,8 @@
 {
- "time": "10/16 09:49",
- "new": 0,
+ "time": "10/17 09:48",
+ "new": 7,
  "instant": 0,
- "digest": 0,
- "dropped": 0,
- "errors": [
-  "학생처 공지: HTTPSConnectionPool(host='student.snu.ac.kr', port=443): Read timed out. (read timeout=20)"
- ]
+ "digest": 2,
+ "dropped": 5,
+ "errors": []
 }
