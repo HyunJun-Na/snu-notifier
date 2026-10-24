@@ -1,8 +1,8 @@
 {
- "time": "10/23 10:00",
- "new": 11,
- "instant": 3,
+ "time": "10/24 10:10",
+ "new": 15,
+ "instant": 2,
  "digest": 0,
- "dropped": 8,
+ "dropped": 13,
  "errors": []
 }
